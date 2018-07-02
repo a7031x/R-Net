@@ -10,8 +10,7 @@ class Model(object):
         self.c, self.q, self.ch, self.qh, self.y1, self.y2, self.qa_id = batch.get_next()
         self.is_train = tf.get_variable(
             "is_train", shape=[], dtype=tf.bool, trainable=False)
-        self.word_mat = tf.get_variable("word_mat", initializer=tf.constant(
-            word_mat, dtype=tf.float32), trainable=False)
+        self.word_mat = tf.get_variable("word_mat", shape=[len(word_mat), len(word_mat[0])], dtype=tf.float32, trainable=True)
         self.char_mat = tf.get_variable(
             "char_mat", initializer=tf.constant(char_mat, dtype=tf.float32))
 
