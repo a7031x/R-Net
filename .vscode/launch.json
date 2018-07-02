@@ -1,0 +1,51 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}"
+        },
+        {
+            "name": "Python: preprocess",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/config.py",
+            "args": [
+                "--mode", "prepro"
+            ]
+        },
+        {
+            "name": "Python: train",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/config.py",
+            "args": [
+                "--mode", "train"
+            ]
+        },
+        {
+            "name": "Python: evaluate",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/evaluate-v1.1.py",
+            "args": [
+                "data/squad/dev-v1.1.json",
+                "log/answer/answer.json"
+            ]
+        },
+        {
+            "name": "Python: test",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/config.py",
+            "args": [
+                "--mode", "test"
+            ]
+        },
+    ]
+}
