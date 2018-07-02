@@ -7,7 +7,7 @@ from main import train, test
 flags = tf.flags
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
-home = os.path.expanduser("~")
+home = os.path.expanduser(".")
 train_file = os.path.join(home, "data", "squad", "train-v1.1.json")
 dev_file = os.path.join(home, "data", "squad", "dev-v1.1.json")
 test_file = os.path.join(home, "data", "squad", "dev-v1.1.json")
